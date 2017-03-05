@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" id="definitions" name="definitions" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="CheckEligibilityGrade" name="CheckEligibilityGrade">
+    <decisionTable id="decisionTable" hitPolicy="FIRST">
+      <input id="input1" label="Candidate Grade">
+        <inputExpression id="inputExpression1" typeRef="string">        <text>candidateGrade</text>
+</inputExpression>
+      </input>
+      <output id="output1" label="Candidate Eligible" name="personIsEligible_DMNAdvice" typeRef="string" />
+      <rule id="row-406823568-1">
+        <inputEntry id="UnaryTests_0cmpvne">        <text><![CDATA["A"]]></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_0kgo78z">        <text><![CDATA["Yes"]]></text>
+</outputEntry>
+      </rule>
+      <rule id="row-406823568-2">
+        <inputEntry id="UnaryTests_0av5xdy">        <text><![CDATA["B"]]></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_034lyek">        <text><![CDATA["Yes"]]></text>
+</outputEntry>
+      </rule>
+      <rule id="row-406823568-3">
+        <inputEntry id="UnaryTests_17akwv8">        <text><![CDATA["C"]]></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_03558wz">        <text><![CDATA["No"]]></text>
+</outputEntry>
+      </rule>
+      <rule id="row-406823568-4">
+        <inputEntry id="UnaryTests_05z5q5o">        <text><![CDATA["D"]]></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_18evuop">        <text><![CDATA["No"]]></text>
+</outputEntry>
+      </rule>
+      <rule id="row-406823568-5">
+        <inputEntry id="UnaryTests_1r40cyf">        <text><![CDATA["E"]]></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_091pkfq">        <text><![CDATA["No"]]></text>
+</outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
