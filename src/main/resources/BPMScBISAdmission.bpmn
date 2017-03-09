@@ -131,6 +131,8 @@
         <camunda:formData>
           <camunda:formField id="mscbis_personHasFamilyName" label="Family Name" type="string" />
           <camunda:formField id="mscbis_personHasFirstName" label="First Name" type="string" />
+          <camunda:formField id="mscbis_personHasNationality" label="Nationality" type="string" />
+          <camunda:formField id="mscbis_personCandidateGrade" label="Grade" type="string" />
         </camunda:formData>
       </bpmn:extensionElements>
       <bpmn:outgoing>SequenceFlow_1dchtv9</bpmn:outgoing>
