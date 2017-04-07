@@ -1,0 +1,19 @@
+package ch.fhnw.digibp.message;
+
+import org.camunda.bpm.engine.delegate.DelegateExecution;
+import org.camunda.bpm.engine.delegate.JavaDelegate;
+
+import javax.inject.Named;
+
+/**
+ * Created by andreas.martin on 05.04.2017.
+ */
+@Named
+public class ApplicationArrivedMessage implements JavaDelegate {
+
+    public void execute(DelegateExecution delegateExecution) throws Exception {
+       delegateExecution.getProcessEngineServices().getRuntimeService()
+                .createMessageCorrelation("Message_ApplicationArrived")
+                .correlateStartMessage();
+    }
+}

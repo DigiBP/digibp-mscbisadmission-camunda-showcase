@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="DigiBPMScBISAdmission:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="DigiBPMScBISAdmission.war">
+      <element id="artifact" artifact-name="DigiBPMScBISAdmission:war exploded" />
+    </root>
+  </artifact>
+</component>
