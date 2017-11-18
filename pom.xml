@@ -8,9 +8,9 @@
 
     <packaging>${packaging.type}</packaging>
     <properties>
-        <camunda.version>7.6.0</camunda.version>
-        <camunda-spring-boot.version>2.0.0</camunda-spring-boot.version>
-        <spring-boot.version>1.4.4.RELEASE</spring-boot.version>
+        <camunda.version>7.7.0</camunda.version>
+        <camunda-spring-boot.version>2.2.0</camunda-spring-boot.version>
+        <spring-boot.version>1.5.6.RELEASE</spring-boot.version>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -87,15 +87,21 @@
             <artifactId>camunda-spin-dataformat-all</artifactId>
         </dependency>
 
-        <!-- Database (MySQL or H2) drivers -->
+        <!-- Database (MySQL, H2 or postgresql) drivers -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
         </dependency>
-<!--        <dependency>
+         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-        </dependency>-->
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.4-1201-jdbc4</version>
+        </dependency>
+
 
     </dependencies>
 
@@ -164,7 +170,6 @@
                     </plugin>
                     <plugin>
                         <artifactId>maven-war-plugin</artifactId>
-                        <version>2.3</version>
                         <configuration>
                             <failOnMissingWebXml>false</failOnMissingWebXml>
                         </configuration>

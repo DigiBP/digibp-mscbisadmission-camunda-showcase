@@ -8,11 +8,16 @@ camunda:
 # In this case the Camunda data/configuration will persist
 # The file will be placed user the users directory
 #
+#spring:
+#  datasource:
+#    url: jdbc:h2:file:~/camunda
+#    username: sa
+#    password: sa
 spring:
   datasource:
-    url: jdbc:h2:file:~/camunda
-    username: sa
-    password: sa
+    url: ${JDBC_DATABASE_URL}
+    username: ${JDBC_DATABASE_USERNAME}
+    password: ${JDBC_DATABASE_PASSWORD}
 
 #spring:
 #  h2:
