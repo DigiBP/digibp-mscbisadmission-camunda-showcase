@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017. University of Applied Sciences and Arts Northwestern Switzerland FHNW.
+ * Copyright (c) 2018. University of Applied Sciences and Arts Northwestern Switzerland FHNW.
  * All rights reserved.
  */
 
@@ -10,41 +10,26 @@
  */
 package ch.fhnw.digibp.util;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.logging.Logger;
-import javax.annotation.PostConstruct;
-import javax.inject.Inject;
-
-import org.camunda.bpm.engine.AuthorizationService;
-import org.camunda.bpm.engine.FilterService;
-import org.camunda.bpm.engine.IdentityService;
-import org.camunda.bpm.engine.ProcessEngine;
-import org.camunda.bpm.engine.TaskService;
-import org.camunda.bpm.engine.authorization.Authorization;
-
-import static org.camunda.bpm.engine.authorization.Authorization.ANY;
-import static org.camunda.bpm.engine.authorization.Authorization.AUTH_TYPE_GRANT;
-
-import org.camunda.bpm.engine.authorization.Groups;
-import org.camunda.bpm.engine.authorization.Permissions;
-
-import static org.camunda.bpm.engine.authorization.Permissions.ACCESS;
-import static org.camunda.bpm.engine.authorization.Permissions.ALL;
-import static org.camunda.bpm.engine.authorization.Permissions.READ;
-
-import org.camunda.bpm.engine.authorization.Resource;
-import org.camunda.bpm.engine.authorization.Resources;
-
-import static org.camunda.bpm.engine.authorization.Resources.APPLICATION;
-import static org.camunda.bpm.engine.authorization.Resources.FILTER;
-
+import org.camunda.bpm.engine.*;
+import org.camunda.bpm.engine.authorization.*;
 import org.camunda.bpm.engine.filter.Filter;
 import org.camunda.bpm.engine.identity.Group;
 import org.camunda.bpm.engine.identity.User;
 import org.camunda.bpm.engine.impl.persistence.entity.AuthorizationEntity;
 import org.camunda.bpm.engine.task.TaskQuery;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
+import javax.inject.Inject;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.logging.Logger;
+
+import static org.camunda.bpm.engine.authorization.Authorization.ANY;
+import static org.camunda.bpm.engine.authorization.Authorization.AUTH_TYPE_GRANT;
+import static org.camunda.bpm.engine.authorization.Permissions.*;
+import static org.camunda.bpm.engine.authorization.Resources.APPLICATION;
+import static org.camunda.bpm.engine.authorization.Resources.FILTER;
 
 /**
  * @author andreas.martin

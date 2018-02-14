@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017. University of Applied Sciences and Arts Northwestern Switzerland FHNW.
+ * Copyright (c) 2018. University of Applied Sciences and Arts Northwestern Switzerland FHNW.
  * All rights reserved.
  */
 
@@ -10,12 +10,12 @@
  */
 package ch.fhnw.digibp.service;
 
-import java.util.logging.Logger;
-import javax.inject.Named;
-
 import ch.fhnw.digibp.util.NameGenerator;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
+
+import javax.inject.Named;
+import java.util.logging.Logger;
 
 /**
  *
@@ -43,6 +43,7 @@ public class DemoDataService implements JavaDelegate {
         setVariableIfEmpty(execution, "mscbis_personHasNationality", NameGenerator.getName());
         setVariableIfEmpty(execution, "mscbis_personHasBusinessRole", "Applicant");
         setVariableIfEmpty(execution, "mscbis_applicationToProgramme", "FHNW MSc BIS Programme");
+        setVariableIfEmpty(execution, "mscbis_personCandidateGrade", Integer.toString(1 + (int) (Math.random() * ((6 - 1) + 1))));
 
     }
 }

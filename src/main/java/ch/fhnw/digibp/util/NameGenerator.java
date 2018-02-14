@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017. University of Applied Sciences and Arts Northwestern Switzerland FHNW.
+ * Copyright (c) 2018. University of Applied Sciences and Arts Northwestern Switzerland FHNW.
  * All rights reserved.
  */
 
@@ -11,7 +11,6 @@
 package ch.fhnw.digibp.util;
 
 import java.util.Random;
-import javax.inject.Singleton;
 
 /**
  * @author andreas.martin

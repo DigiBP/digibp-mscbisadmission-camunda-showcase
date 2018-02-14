@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017. University of Applied Sciences and Arts Northwestern Switzerland FHNW.
+ * Copyright (c) 2018. University of Applied Sciences and Arts Northwestern Switzerland FHNW.
  * All rights reserved.
  */
 
@@ -10,12 +10,13 @@
  */
 package ch.fhnw.digibp.service;
 
+import org.camunda.bpm.engine.delegate.DelegateExecution;
+import org.camunda.bpm.engine.delegate.JavaDelegate;
+
+import javax.inject.Named;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Logger;
-import javax.inject.Named;
-import org.camunda.bpm.engine.delegate.DelegateExecution;
-import org.camunda.bpm.engine.delegate.JavaDelegate;
 
 /**
  *
@@ -32,7 +33,7 @@ public class InitialiseAdmissionCaseService implements JavaDelegate {
 
         LOGGER.info("initialiseAdmissionCase called!!!");
 
-        execution.setVariable("mscbis_applicationHasDate", new Date());
+        execution.setVariable("mscbis_applicationHasDate", new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss").format(new Date()));
 
     }
 }

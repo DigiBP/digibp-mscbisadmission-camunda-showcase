@@ -1,10 +1,12 @@
+/*
+ * Copyright (c) 2018. University of Applied Sciences and Arts Northwestern Switzerland FHNW.
+ * All rights reserved.
+ */
+
 package ch.fhnw.digibp.message;
 
-import org.camunda.bpm.engine.RuntimeService;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
-import org.camunda.bpm.engine.runtime.Execution;
-import org.camunda.bpm.engine.runtime.MessageCorrelationResult;
 
 import javax.inject.Named;
 
